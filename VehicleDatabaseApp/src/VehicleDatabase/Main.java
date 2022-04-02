@@ -2,25 +2,25 @@ package VehicleDatabase;
 
 public class Main {
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 
-        SUV vehicle01 = new SUV(true, true, true, true, true, "Ford", "Focus", 2020, Gearbox.Automatic, colour.BLACK, 2000, "abc1234567890def");
-        Motorbike vehicle02 = new Motorbike(true, "Yammaha", "R15", 2020, Gearbox.Manual, colour.RED, 50, "asdhjashdlahsdj12");
-        Saloon vehicle03 = new Saloon(false, true, false, false, "BMW", "520 M", 2021, Gearbox.Automatic, colour.WHITE, 8, "qwertyuiop1234567");
-        estate vehicle04 = new estate(false, false, false, false, true, "Skoda", "Octavia Estate", 2019, Gearbox.Manual, colour.GRAY, 23000, "qsxcdffe234664");
-        hatchback vehicle05 = new hatchback(true, true, true, true, "Kia", "Sportage", 2017, Gearbox.Manual, colour.ORANGE, 30002, "asdfghjkl12345678");
-        hatchback vehicle06 = new hatchback(true, true, true, true, "Ford", "Focus", 0, Gearbox.Manual, colour.BLUE, 0, "ajhsdkjahsdkjhasd");
-        
-
-// Array created to store 5 vehicle objects
-        Vehicles[] vehicles = new Vehicles[5];
-
-        vehicles[0] = vehicle01;
-        vehicles[1] = vehicle02;
-        vehicles[2] = vehicle03;
-        vehicles[3] = vehicle04;
-        vehicles[4] = vehicle05;
-        vehicle01.addAWD();
+//        SUV vehicle01 = new SUV(true, true, true, true, true, "Ford", "Focus", 2020, Gearbox.Automatic, colour.BLACK, 2000, "abc1234567890def");
+//        Motorbike vehicle02 = new Motorbike(true, make.Audi, "R15", 2020, Gearbox.Manual, colour.RED, 50, "asdhjashdlahsdj12");
+//        Saloon vehicle03 = new Saloon(false, true, false, false, "BMW", "520 M", 2021, Gearbox.Automatic, colour.WHITE, 8, "qwertyuiop1234567");
+//        estate vehicle04 = new estate(false, false, false, false, true, "Skoda", "Octavia Estate", 2019, Gearbox.Manual, colour.GRAY, 23000, "qsxcdffe234664");
+//        hatchback vehicle05 = new hatchback(true, true, true, true, "Kia", "Sportage", 2017, Gearbox.Manual, colour.ORANGE, 30002, "asdfghjkl12345678");
+//        hatchback vehicle06 = new hatchback(true, true, true, true, "Ford", "Focus", 0, Gearbox.Manual, colour.BLUE, 0, "ajhsdkjahsdkjhasd");
+//        
+//
+//// Array created to store 5 vehicle objects
+//        Vehicles[] vehicles = new Vehicles[5];
+//
+//        vehicles[0] = vehicle01;
+//        vehicles[1] = vehicle02;
+//        vehicles[2] = vehicle03;
+//        vehicles[3] = vehicle04;
+//        vehicles[4] = vehicle05;
+//        vehicle01.addAWD();
         
 
         // Random Test Code to check everything is working correctly.
@@ -107,5 +107,5 @@ public class Main {
 //        System.out.println("List of Array Position 5 : " + vehicles[4].getMake());
 
 
-    }
+//   }
 }

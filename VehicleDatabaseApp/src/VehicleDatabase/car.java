@@ -9,14 +9,29 @@ public class car extends Vehicles {
     private boolean addTowBar;
     private boolean addRoofRack;
 
-    public car(boolean addSatNav, boolean addParkingSensors, boolean addTowBar,
-            boolean addRoofRack, String make, String model, int year,
-            Gearbox gearbox, colour colour, int mileage, String vin) {
-        super(make, model, year, gearbox, colour, mileage, vin);
+    public car(boolean addSatNav, boolean addParkingSensors, boolean addTowBar, boolean addRoofRack, VehicleDatabase.make make, String model, int year, Gearbox gearbox, VehicleDatabase.colour colour, int mileage, String vin, vehicleclass vehicleClass, VehicleStatus vehicleStatus) {
+        super(make, model, year, gearbox, colour, mileage, vin, vehicleClass, vehicleStatus);
         this.addSatNav = addSatNav;
         this.addParkingSensors = addParkingSensors;
         this.addTowBar = addTowBar;
         this.addRoofRack = addRoofRack;
+    }
+
+
+    public boolean hasSatNav() {
+        return addSatNav;
+    }
+
+    public boolean hasParkingSensors() {
+        return addParkingSensors;
+    }
+
+    public boolean hasTowBar() {
+        return addTowBar;
+    }
+
+    public boolean hasRoofRack() {
+        return addRoofRack;
     }
 
     public void addSatNav() {

@@ -1,19 +1,23 @@
 package VehicleDatabase;
 
 // primary class/methods which is the base which other classes extend from
+import java.io.Serializable;
 
-public abstract class Vehicles {
+public abstract class Vehicles implements Serializable, Comparable<Vehicles> {
 
-    private final String make;
+    private final make make;
     private final String model;
     private final int year;
     private final Gearbox gearbox;
     private colour colour;
     private int mileage;
     private final String vin;
+    private final vehicleclass vehicleClass;
+    private VehicleStatus vehicleStatus;
+    // Reg Number
+    // KeyBox ID
 
-    public Vehicles(String make, String model, int year,
-            Gearbox gearbox, colour colour, int mileage, String vin) {
+    public Vehicles(make make, String model, int year, Gearbox gearbox, colour colour, int mileage, String vin, vehicleclass vehicleClass, VehicleStatus vehicleStatus) {
         this.make = make;
         this.model = model;
         this.year = year;
@@ -21,9 +25,25 @@ public abstract class Vehicles {
         this.colour = colour;
         this.mileage = mileage;
         this.vin = vin;
+        this.vehicleClass = vehicleClass;
+        this.vehicleStatus = vehicleStatus;
     }
 
-    public String getMake() {      
+
+
+    public vehicleclass getVehicleClass() {
+        return vehicleClass;
+    }
+
+    public VehicleStatus getVehicleStatus() {
+        return vehicleStatus;
+    }
+
+    public void setVehicleStatus(VehicleStatus vehicleStatus) {
+        this.vehicleStatus = vehicleStatus;
+    }
+
+    public make getMake() {
         return make;
     }
 
@@ -51,7 +71,7 @@ public abstract class Vehicles {
             this.colour = colour;
             System.out.println("Colour Changed Successfully! Vehicle Colour is now " + colour);
         }
-        
+
     }
 
     public int getMileage() {
@@ -70,6 +90,20 @@ public abstract class Vehicles {
 
     public String getVin() {
         return vin;
+    }
+
+    // Unique Vin Number
+    //
+    @Override
+    public int compareTo(Vehicles v) {
+        if (!this.vin.equals(v.getVin())) {
+            System.out.println("Error... Vehicle(VIN Number) Already on System...");
+            
+            
+        } 
+        // Key Box ID
+        // Reg Number
+        return this.vin.compareTo(v.getVin());
     }
 
 }
